@@ -2,7 +2,7 @@
 
 int main() {
     const int TAMANO = 10;
-    int Numeros[TAMANO];
+    double Numeros[TAMANO];
 
     std::cout << "Dame 10 numeros:" << std::endl;
     for (int i = 0; i < TAMANO; i++) {
@@ -14,20 +14,17 @@ int main() {
     for (int i = 0; i < TAMANO - 1; i++) {
         for (int j = 0; j < TAMANO - i - 1; j++) {
             if (Numeros[j] > Numeros[j + 1]) {
-                // Intercambio de números
-                int temp = Numeros[j];
+                double temp = Numeros[j];
                 Numeros[j] = Numeros[j + 1];
                 Numeros[j + 1] = temp;
             }
         }
     }
 
-    // Despliegue de números ordenados
-    std::cout << "Numeros ordenados en orden ascendente:" << std::endl;
+    std::cout << "Numeros ordenados en Orden Ascendente:" << std::endl;
     for (int i = 0; i < TAMANO; i++) {
-        std::cout << Numeros[i] << " ";
+        std::cout << Numeros[i] << std::endl;
     }
-    std::cout << std::endl;
 
     return 0;
 }
